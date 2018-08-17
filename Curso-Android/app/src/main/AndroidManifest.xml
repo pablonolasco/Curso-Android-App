@@ -16,6 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".LinearActivity" />
+        <activity android:name=".ContadorMejoradoActivity" />
+        <activity android:name=".ContadorInterfazCursoActivity"></activity>
     </application>
 
 </manifest>

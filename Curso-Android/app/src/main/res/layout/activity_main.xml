@@ -24,23 +24,24 @@
         android:text="@string/mas"
         android:clickable="true"
         android:textColor="@android:color/white"
-        android:drawableTint="@android:color/white"
+        android:tint="@android:color/white"
         android:background="@color/colorAccent"
         android:layout_marginBottom="@dimen/margin.element"
-
         android:drawableLeft="@drawable/ic_exposure_plus"
         android:layout_height="wrap_content" />
+
     <Button
         android:id="@+id/btnReset"
         android:drawableLeft="@drawable/ic_restore"
-        android:paddingRight="1dp"
+        android:paddingEnd="1dp"
         android:layout_width="wrap_content"
         android:text="@string/reset"
         android:clickable="true"
         android:layout_marginBottom="@dimen/margin.element"
         android:textColor="@android:color/white"
-        android:drawableTint="@android:color/white"
+        android:tint="@android:color/white"
         android:background="@color/colorAccent"
+
         android:layout_height="wrap_content" />
     <Button
         android:id="@+id/btnRestar"
@@ -48,10 +49,20 @@
         android:text="@string/menos"
         android:clickable="true"
         android:textColor="@android:color/white"
-        android:drawableTint="@android:color/white"
+        android:tint="@android:color/white"
         android:background="@color/colorPrimaryDark"
         android:layout_marginBottom="@dimen/margin.element"
         android:drawableLeft="@drawable/ic_exposure_neg"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btnLinear"
+        android:layout_width="wrap_content"
+        android:text="Linear"
+        android:clickable="true"
+        android:textColor="@android:color/white"
+        android:tint="@android:color/white"
+        android:background="@android:color/holo_blue_dark"
+        android:layout_marginBottom="@dimen/margin.element"
         android:layout_height="wrap_content" />
 
 </LinearLayout>
