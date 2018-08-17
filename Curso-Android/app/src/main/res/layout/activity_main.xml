@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@android:color/white"
+    >
+
+    <TextView
+        android:id="@+id/txMas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginBottom="@dimen/margin.element"
+        />
+    <Button
+        android:id="@+id/btnIncrement"
+        android:layout_width="wrap_content"
+        android:text="@string/mas"
+        android:clickable="true"
+        android:textColor="@android:color/white"
+        android:drawableTint="@android:color/white"
+        android:background="@color/colorAccent"
+        android:layout_marginBottom="@dimen/margin.element"
+
+        android:drawableLeft="@drawable/ic_exposure_plus"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btnReset"
+        android:drawableLeft="@drawable/ic_restore"
+        android:paddingRight="1dp"
+        android:layout_width="wrap_content"
+        android:text="@string/reset"
+        android:clickable="true"
+        android:layout_marginBottom="@dimen/margin.element"
+        android:textColor="@android:color/white"
+        android:drawableTint="@android:color/white"
+        android:background="@color/colorAccent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btnRestar"
+        android:layout_width="wrap_content"
+        android:text="@string/menos"
+        android:clickable="true"
+        android:textColor="@android:color/white"
+        android:drawableTint="@android:color/white"
+        android:background="@color/colorPrimaryDark"
+        android:layout_marginBottom="@dimen/margin.element"
+        android:drawableLeft="@drawable/ic_exposure_neg"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
