@@ -19,6 +19,7 @@
             android:text="Contador" />
 
         <TextView
+            android:id="@+id/txMas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="4"
@@ -63,8 +64,6 @@
         android:gravity="bottom|center_horizontal"
         android:orientation="horizontal">
 
-
-
         <Button
             android:id="@+id/btnReset"
             android:layout_width="wrap_content"
@@ -76,6 +75,27 @@
             android:layout_marginBottom="12dp"
             android:textColor="@android:color/white"
             android:tint="@android:color/white" />
+
+
+        <!--
+        numberSigned solo numeros enteros
+        -->
+        <EditText
+            android:id="@+id/ed_Reset"
+            android:layout_width="72sp"
+            android:layout_height="wrap_content"
+            android:inputType="numberSigned"
+            android:hint="0"
+            android:cursorVisible="false"
+            android:gravity="center"/>
+
+        <CheckBox
+            android:id="@+id/ch_Status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="Conteo Negativo" />
+
     </LinearLayout>
 
 
