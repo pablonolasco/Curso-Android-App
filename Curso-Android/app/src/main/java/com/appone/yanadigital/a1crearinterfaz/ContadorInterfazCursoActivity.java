@@ -67,6 +67,8 @@ public class ContadorInterfazCursoActivity extends AppCompatActivity implements 
 
 
 
+
+
     }
 
     public void resetNumero(){
@@ -97,10 +99,15 @@ public class ContadorInterfazCursoActivity extends AppCompatActivity implements 
     @Override
     public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
 
-        if(i == EditorInfo.IME_ACTION_DONE){
-            resetNumero();
-            mResetNumber.setOnEditorActionListener(this);
+        if(textView.getId()== R.id.ed_Reset){
+            Toast.makeText(mContext,"entro",Toast.LENGTH_SHORT);
+            if(i == EditorInfo.IME_ACTION_DONE){
+
+                resetNumero();
+
+            }
         }
+
 
         return false;
     }
