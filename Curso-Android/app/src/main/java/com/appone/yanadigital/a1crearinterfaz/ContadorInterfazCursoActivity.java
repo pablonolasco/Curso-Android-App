@@ -4,14 +4,17 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class ContadorInterfazCursoActivity extends AppCompatActivity {
+public class ContadorInterfazCursoActivity extends AppCompatActivity implements TextView.OnEditorActionListener {
     private Button mBtnSum;
     private Button mBtnRes;
     private Button mBtnRest;
@@ -57,26 +60,48 @@ public class ContadorInterfazCursoActivity extends AppCompatActivity {
         mBtnRest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                    String valor=mResetNumber.getText().toString().trim();
-                    if (!(valor.equals("") || valor.length() <=0)){
-                        int numero = Integer.parseInt(mResetNumber.getText().toString());
-
-                        if(!(numero<=0)) {
-                            sContador -= numero;
-                            mTxResultado.setText(String.valueOf(sContador));
-
-                        }
-                    }else{
-                        Toast.makeText(mContext,"Campo Vacio",Toast.LENGTH_SHORT).show();
-                        mResetNumber.setFocusable(true);
-                    }
-
+                resetNumero();
             }
         });
 
 
 
 
+    }
+
+    public void resetNumero(){
+
+        //Almacenar la opcion de entrada, en este caso es el teclado
+        InputMethodManager manager= (InputMethodManager)getSystemService(INPUT_METHOD_SERVICE);
+
+
+        String valor=mResetNumber.getText().toString().trim();
+        if (!(valor.equals("") || valor.length() <=0)){
+            int numero = Integer.parseInt(mResetNumber.getText().toString());
+
+            if(!(numero<=0)) {
+                sContador -= numero;
+                mTxResultado.setText(String.valueOf(sContador));
+
+            }
+        }else{
+            Toast.makeText(mContext,"Campo Vacio",Toast.LENGTH_SHORT).show();
+            mResetNumber.setFocusable(true);
+        }
+        //Ocultar el teclado al dar clic en el boton reset
+        ;                    manager.hideSoftInputFromWindow(mResetNumber.getWindowToken(),0);
+
+
+    }
+
+    @Override
+    public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
+
+        if(i == EditorInfo.IME_ACTION_DONE){
+            resetNumero();
+            mResetNumber.setOnEditorActionListener(this);
+        }
+
+        return false;
     }
 }

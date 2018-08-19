@@ -1,0 +1,36 @@
+dp=densidad de pixeles
+
+ldpi
+Baja densidad
+
+/*Medida base*/
+mdpi (160)
+Meddia densidad
+
+hdpi(240)
+Alta densidad
+
+xhdpi(320)
+Extra alta densidad
+
+xxhdpi
++Extra alta densidad
+
+1px=1dp o dpi
+
+
+Formula
+
+px=dp * (dpi/160)
+
+Sacar el tamaño dp para una pantalla de extra alta densidad
+dp=4
+px=4*(320/160)
+
+px=4*(2)
+
+px=8
+dp=8 en tamaño
+
+
+
