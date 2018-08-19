@@ -57,9 +57,21 @@ public class ContadorInterfazCursoActivity extends AppCompatActivity {
         mBtnRest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int numero=Integer.parseInt(mResetNumber.getText().toString());
-                sContador-=numero;
-                mTxResultado.setText(String.valueOf(sContador));
+
+                    String valor=mResetNumber.getText().toString().trim();
+                    if (!(valor.equals("") || valor.length() <=0)){
+                        int numero = Integer.parseInt(mResetNumber.getText().toString());
+
+                        if(!(numero<=0)) {
+                            sContador -= numero;
+                            mTxResultado.setText(String.valueOf(sContador));
+
+                        }
+                    }else{
+                        Toast.makeText(mContext,"Campo Vacio",Toast.LENGTH_SHORT).show();
+                        mResetNumber.setFocusable(true);
+                    }
+
             }
         });
 
