@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">EnvioDatosActivity</string>
+    <string name="tx.resultado">Resultado</string>
+</resources>

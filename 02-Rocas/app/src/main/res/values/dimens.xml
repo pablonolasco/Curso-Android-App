@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="btn.margin.bottom">10dp</dimen>
+    <dimen name="btn.margin">10dp</dimen>
+    <dimen name="tx.info">10dp</dimen>
+    <dimen name="tx.bar">20sp</dimen>
+</resources>

@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".LinearActivity" />
         <activity android:name=".ContadorMejoradoActivity" />
-        <activity android:name=".ContadorInterfazCursoActivity"></activity>
+        <activity android:name=".ContadorInterfazCursoActivity" />
+        <activity android:name=".ScrollLayoutsActivity"></activity>
     </application>
 
 </manifest>

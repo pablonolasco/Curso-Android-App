@@ -14,7 +14,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class ContadorInterfazCursoActivity extends AppCompatActivity implements TextView.OnEditorActionListener {
+public class ContadorInterfazCursoActivity extends AppCompatActivity {
     private Button mBtnSum;
     private Button mBtnRes;
     private Button mBtnRest;
@@ -61,10 +61,23 @@ public class ContadorInterfazCursoActivity extends AppCompatActivity implements 
             @Override
             public void onClick(View view) {
                 resetNumero();
+
             }
         });
 
+        /**
+         * Metodo para realizar el resetNumero el teclado al presionar la flecha en el teclado
+         */
 
+        mResetNumber.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
+                if(i == EditorInfo.IME_ACTION_DONE){
+                        resetNumero();
+                }
+                return false;
+            }
+        });
 
 
 
@@ -84,6 +97,7 @@ public class ContadorInterfazCursoActivity extends AppCompatActivity implements 
             if(!(numero<=0)) {
                 sContador -= numero;
                 mTxResultado.setText(String.valueOf(sContador));
+                mResetNumber.setText("");
 
             }
         }else{
@@ -91,11 +105,13 @@ public class ContadorInterfazCursoActivity extends AppCompatActivity implements 
             mResetNumber.setFocusable(true);
         }
         //Ocultar el teclado al dar clic en el boton reset
-        ;                    manager.hideSoftInputFromWindow(mResetNumber.getWindowToken(),0);
+         manager.hideSoftInputFromWindow(mResetNumber.getWindowToken(),0);
 
 
     }
 
+
+/*
     @Override
     public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
 
@@ -110,5 +126,5 @@ public class ContadorInterfazCursoActivity extends AppCompatActivity implements 
 
 
         return false;
-    }
+    }*/
 }

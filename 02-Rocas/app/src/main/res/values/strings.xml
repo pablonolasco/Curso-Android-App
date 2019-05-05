@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Rocas</string>
+    <string name="tx_rocas">Rocas!</string>
+    <string name="btn.rocas">Rocas</string>
+    <string name="btn.jugar">¡Jugar!</string>
+    <string name="btn.configuraci_n">Configuración</string>
+    <string name="btn.salir">Salir</string>
+    <string name="btn.informaci_n">Información</string>
+    <string name="txt.info.importante">Información Importante</string>
+    <string name="tx.info.nombre">Programador: Pablo Nolasco Castro</string>
+
+</resources>

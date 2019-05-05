@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    >
+    <!--
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="20dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="28sp"
+                android:layout_gravity="top|center_horizontal"
+                android:text="@string/tx_rocas"
+                />
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/btn.margin"
+                android:textAllCaps="false"
+                android:theme="@style/ButtonRocas"
+                android:text="@string/btn.jugar"
+                android:drawableLeft="@drawable/ic_play"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/btn.margin"
+                android:theme="@style/ButtonRocas"
+                android:text="@string/btn.configuraci_n"
+                android:drawableLeft="@drawable/ic_settings"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/btn.margin"
+                android:theme="@style/ButtonRocas"
+                android:text="@string/btn.salir"
+                android:drawableLeft="@drawable/ic_exit"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/btn.margin"
+                android:theme="@style/ButtonRocas"
+                android:text="@string/btn.informaci_n"
+                android:drawableLeft="@drawable/ic_info"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="28dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="28sp"
+        android:layout_gravity="center|center_horizontal"
+        android:text="@string/tx_rocas"
+        />
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="*"
+        android:gravity="center_vertical"
+        >
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            <Button
+                android:id="@+id/btn_play"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/btn.margin"
+                android:textAllCaps="false"
+                android:theme="@style/ButtonRocas"
+                android:text="@string/btn.jugar"
+                android:drawableLeft="@drawable/ic_play"
+                />
+            <Button
+                android:id="@+id/btn_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/btn.margin"
+                android:theme="@style/ButtonRocas"
+                android:text="@string/btn.informaci_n"
+                android:drawableLeft="@drawable/ic_info"
+                />
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            >
+            <Button
+                android:id="@+id/btn_conf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/btn.margin"
+                android:theme="@style/ButtonRocas"
+                android:text="@string/btn.configuraci_n"
+                android:drawableLeft="@drawable/ic_settings"
+                />
+            <Button
+                android:id="@+id/btn_exit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/btn.margin"
+                android:theme="@style/ButtonRocas"
+                android:text="@string/btn.salir"
+                android:drawableLeft="@drawable/ic_exit"
+                />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

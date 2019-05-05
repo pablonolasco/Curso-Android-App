@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".InfoActivity">
+
+    <TextView
+        android:id="@+id/tx_importante"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/txt.info.importante"
+        android:textAllCaps="true"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/tx_progamador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tx.info.nombre"
+        android:textSize="15sp"
+        android:layout_centerHorizontal="true"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+        android:layout_margin="@dimen/tx.info"
+        android:layout_below="@id/tx_importante"
+        />
+    <android.support.v7.widget.AppCompatImageView
+
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/star_big_on"
+        android:layout_below="@+id/tx_progamador"
+        android:layout_centerHorizontal="true"
+        />
+</RelativeLayout>

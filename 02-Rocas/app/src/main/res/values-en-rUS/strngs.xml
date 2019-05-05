@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Rocks</string>
+    <string name="tx_rocas">Rocks!</string>
+    <string name="btn.rocas">Rocks</string>
+    <string name="btn.jugar">¡Play!</string>
+    <string name="btn.configuraci_n">Configuration</string>
+    <string name="btn.salir">Exit</string>
+    <string name="btn.informaci_n">Information</string>
+</resources>

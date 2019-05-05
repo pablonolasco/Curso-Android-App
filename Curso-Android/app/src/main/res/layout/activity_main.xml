@@ -64,5 +64,15 @@
         android:background="@android:color/holo_blue_dark"
         android:layout_marginBottom="@dimen/margin.element"
         android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btnScroll"
+        android:layout_width="wrap_content"
+        android:text="Scroll"
+        android:clickable="true"
+        android:textColor="@android:color/white"
+        android:tint="@android:color/white"
+        android:background="@android:color/holo_blue_dark"
+        android:layout_marginBottom="@dimen/margin.element"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

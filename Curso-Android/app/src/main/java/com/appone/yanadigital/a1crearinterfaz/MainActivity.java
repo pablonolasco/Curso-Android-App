@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     private Button mBtnRes;
     private Button mBtnRest;
     private Button mBtnLinear;
+    private Button mBtnScroll;
     private TextView mTxResultado;
     private static int  sContador;
     private Context context;
@@ -35,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         mBtnRes=(Button)findViewById(R.id.btnRestar);
         mBtnRest=(Button)findViewById(R.id.btnReset);
         mBtnLinear=(Button)findViewById(R.id.btnLinear);
+        mBtnScroll=(Button)findViewById(R.id.btnScroll);
         mTxResultado=(TextView)findViewById(R.id.txMas);
         mTxResultado.setText(String.valueOf(sContador));
         mBtnSum.setOnClickListener(new View.OnClickListener() {
@@ -63,6 +65,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent= new Intent(context,ContadorInterfazCursoActivity.class);
+                startActivity(intent);
+            }
+        });
+        mBtnScroll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(context,ScrollLayoutsActivity.class);
                 startActivity(intent);
             }
         });
